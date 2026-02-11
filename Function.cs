@@ -39,6 +39,11 @@ class Function : IFunction
     }
     public void BorrowBook()
     {
+        
+        if (books.Count == 0)
+        {
+            Console.WriteLine("There are no available books");
+        }
 
         Console.WriteLine("Input Book ID");
         int input;
@@ -71,6 +76,11 @@ class Function : IFunction
     }
     public void ReturnBook()
     {
+        
+        if (books.Count == 0)
+        {
+            Console.WriteLine("There are no available books");
+        }
         Console.WriteLine("input the id of the borrowed book");
         int id;
         bool validId = int.TryParse(Console.ReadLine(), out id);
