@@ -49,7 +49,8 @@ class Menu : Function
                 }
             }
 
-        }catch (Exception text)
+        }
+        catch (Exception text)
         {
             Console.WriteLine(text.Message);
         }

@@ -3,7 +3,7 @@ using System.ComponentModel.Design.Serialization;
 class Function : IFunction
 {
     List<Book> books = new List<Book>();
-
+  int  BookID =  0;
     public void AddBook()
     {
         Console.WriteLine("Enter the book title");
@@ -29,11 +29,11 @@ class Function : IFunction
         {
             Console.WriteLine("There are no available books");
         }
-        int id = 0;
+        
         foreach (Book book in books)
         {
-                id ++;
-            Console.WriteLine($"Book 1D - {id }: Title:{book.Title} , Author Name : {book.Author} , Year Published : {book.Year} ,Book status : {book.bookStatus}");
+                BookID ++;
+            Console.WriteLine($"Book 1D - {BookID }: Title:{book.Title} , Author Name : {book.Author} , Year Published : {book.Year} ,Book status : {book.bookStatus}");
           
         }
     }
