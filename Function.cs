@@ -3,7 +3,7 @@ using System.ComponentModel.Design.Serialization;
 class Function : IFunction
 {
     List<Book> books = new List<Book>();
-  int  BookID =  0;
+    int bookID = 0;
     public void AddBook()
     {
         Console.WriteLine("Enter the book title");
@@ -18,6 +18,7 @@ class Function : IFunction
         {
             Console.WriteLine("Input a valid year number not less than 4 digits to align with the current century");
             year = int.Parse(Console.ReadLine()!);
+            break;
         }
         books.Add(new Book(title, authorName, year));
         Console.WriteLine("Book Has Been Successfully Added");
@@ -32,9 +33,9 @@ class Function : IFunction
         
         foreach (Book book in books)
         {
-                BookID ++;
-            Console.WriteLine($"Book 1D - {BookID }: Title:{book.Title} , Author Name : {book.Author} , Year Published : {book.Year} ,Book status : {book.bookStatus}");
-          
+                
+            Console.WriteLine($"Book 1D - {bookID }: Title:{book.Title} , Author Name : {book.Author} , Year Published : {book.Year} ,Book status : {book.bookStatus}");
+          bookID ++;
         }
     }
     public void BorrowBook()
