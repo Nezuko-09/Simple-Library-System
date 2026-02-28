@@ -33,9 +33,9 @@ class Function : IFunction
         
         foreach (Book book in books)
         {
-            bookID ++;  
+           
             Console.WriteLine($"Book 1D - {bookID }: Title:{book.Title} , Author Name : {book.Author} , Year Published : {book.Year} ,Book status : {book.bookStatus}");
-          
+           bookID ++;  
         }
     }
     public void BorrowBook()
