@@ -3,7 +3,7 @@ using System.ComponentModel.Design.Serialization;
 class Function : IFunction
 {
     List<Book> books = new List<Book>();
-    int bookID = 0;
+    int bookID = 1;
     public void AddBook()
     {
         Console.WriteLine("Enter the book title");
